@@ -1,0 +1,70 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.DecisionTable -X 1 -S "weka.attributeSelection.BestFirst -D 1 -N 5"
+Relation:     original_data-weka.filters.unsupervised.attribute.NumericToNominal-R4
+Instances:    9053
+Attributes:   4
+              movieId
+              imdbId
+              tmdbId
+              average_rating
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Decision Table:
+
+Number of training instances: 9053
+Number of Rules : 11
+Non matches covered by Majority class.
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 8
+	Merit of best subset found:   27.472
+Evaluation (for feature selection): CV (leave one out) 
+Feature set: 2,3,4
+
+Time taken to build model: 0.14 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        2469               27.2727 %
+Incorrectly Classified Instances      6584               72.7273 %
+Kappa statistic                          0.0491
+Mean absolute error                      0.1621
+Root mean squared error                  0.2847
+Relative absolute error                 98.6324 %
+Root relative squared error             99.3325 %
+Total Number of Instances             9053     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    ?          0.000    ?          ?        0.685     0.017     0.5
+                 0.000    0.000    ?          0.000    ?          ?        0.608     0.032     1
+                 0.000    0.000    ?          0.000    ?          ?        0.682     0.048     1.5
+                 0.000    0.000    0.000      0.000    0.000      -0.004   0.596     0.091     2
+                 0.000    0.002    0.000      0.000    0.000      -0.012   0.566     0.106     2.5
+                 0.291    0.243    0.241      0.291    0.264      0.045    0.558     0.238     3
+                 0.243    0.171    0.294      0.243    0.266      0.077    0.580     0.279     3.5
+                 0.611    0.529    0.281      0.611    0.384      0.071    0.580     0.328     4
+                 0.000    0.000    ?          0.000    ?          ?        0.636     0.084     4.5
+                 0.059    0.006    0.290      0.059    0.098      0.116    0.676     0.091     5
+Weighted Avg.    0.273    0.224    ?          0.273    ?          ?        0.586     0.222     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g    h    i    j   <-- classified as
+    0    0    0    0    0   18    4   71    0    0 |    a = 0.5
+    0    0    0    0    0   60   26  124    0    1 |    b = 1
+    0    0    0    0    1   41   16  151    0    2 |    c = 1.5
+    0    0    0    0    1  182  112  342    0    3 |    d = 2
+    0    0    0    0    0  255  193  401    0    5 |    e = 2.5
+    0    0    0    0    3  553  425  908    0   10 |    f = 3
+    0    0    0    2    4  527  499 1013    0   12 |    g = 3.5
+    0    0    0    0    2  522  356 1397    0   11 |    h = 4
+    0    0    0    0    0   75   45  335    0    5 |    i = 4.5
+    0    0    0    0    2   60   21  237    0   20 |    j = 5

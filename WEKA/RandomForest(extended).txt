@@ -1,0 +1,66 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     attributeresult-weka.filters.unsupervised.attribute.NumericToNominal-R4
+Instances:    9053
+Attributes:   8
+              movieId
+              imdbId
+              tmdbId
+              average_rating
+              SeasonReleased
+              simplifiedPopularity
+              profitability_numeric
+              popularity_score
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 3.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        2322               25.649  %
+Incorrectly Classified Instances      6731               74.351  %
+Kappa statistic                          0.0546
+Mean absolute error                      0.1597
+Root mean squared error                  0.2892
+Relative absolute error                 97.1729 %
+Root relative squared error            100.8961 %
+Total Number of Instances             9053     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.001    0.000      0.000    0.000      -0.003   0.674     0.018     0.5
+                 0.005    0.005    0.021      0.005    0.008      -0.001   0.556     0.030     1
+                 0.024    0.006    0.089      0.024    0.037      0.035    0.602     0.036     1.5
+                 0.048    0.031    0.107      0.048    0.067      0.026    0.596     0.095     2
+                 0.064    0.045    0.129      0.064    0.086      0.026    0.580     0.123     2.5
+                 0.298    0.241    0.247      0.298    0.270      0.054    0.563     0.254     3
+                 0.324    0.261    0.267      0.324    0.293      0.059    0.575     0.275     3.5
+                 0.420    0.334    0.298      0.420    0.349      0.078    0.580     0.336     4
+                 0.009    0.010    0.043      0.009    0.014      -0.004   0.607     0.072     4.5
+                 0.097    0.011    0.260      0.097    0.141      0.139    0.682     0.124     5
+Weighted Avg.    0.256    0.202    0.222      0.256    0.231      0.054    0.583     0.229     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   f   g   h   i   j   <-- classified as
+   0   0   0   4   5  23  16  44   0   1 |   a = 0.5
+   0   1   1  10  11  70  52  64   0   2 |   b = 1
+   0   2   5  20  13  55  39  70   4   3 |   c = 1.5
+   2   4   8  31  46 174 172 196   2   5 |   d = 2
+   1   6   9  33  55 260 220 252   8  10 |   e = 2.5
+   2  11  14  65  96 566 539 567  18  21 |   f = 3
+   2  12   4  55  89 500 666 703  19   7 |   g = 3.5
+   3   6  10  53  86 490 618 961  30  31 |   h = 4
+   0   2   3   7  14  83 123 210   4  14 |   i = 4.5
+   0   3   2  11  13  68  49 153   8  33 |   j = 5
